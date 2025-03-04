@@ -19,7 +19,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,11 +31,60 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+#calendar {
+  position: fixed;
+  bottom: 4.3em;
+  right: 0;
+  color: #3068c0;
+  border: 2px solid white;
+  background-color: #f4f4f3bd;
+  font-size: 1.5em;
+  padding: 0.3em 0.7em;
+  border-radius: 20% 0 0 20%;
+  backdrop-filter: blur(3.5px);
+}
+#social {
+  position: fixed;
+  bottom: 8em;
+  right: 0;
+  color: #3068c0;
+  border: 2px solid white;
+  background-color: #f4f4f3bd;
+  font-size: 1.5em;
+  padding: 0.3em 0.7em;
+  border-radius: 20% 0 0 20%;
+  backdrop-filter: blur(3.5px);
+}
+#return {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0;
+  color: #f75a5d;
+  border: 2px solid white;
+  background-color: #f4f4f3bd;
+  font-size: 1.5em;
+  padding: 0.3em 0.7em;
+  border-radius: 20% 0 0 20%;
+  backdrop-filter: blur(3.5px);
 }
 
 @media screen and (min-width: 800px) {
   header {
     padding: 1em;
+  }
+  #calendar {
+    position: fixed;
+    bottom: 47em;
+    right: 0;
+  }
+  #social {
+    position: fixed;
+    bottom: 44em;
+    right: 0;
   }
 }
 
@@ -123,6 +176,16 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
 }
+span {
+  position: relative;
+  white-space: nowrap;
+  padding-bottom: 0.3em;
+}
+span img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 p,
 address,
@@ -131,6 +194,11 @@ ol,
 dl,
 blockquote {
   margin-bottom: 1.2em;
+}
+
+section h2 {
+  position: absolute;
+  top: -16px;
 }
 
 h1 + p {
@@ -187,6 +255,7 @@ h1 + p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
 }
 ul,
 ol {
@@ -329,7 +398,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
